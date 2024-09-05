@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LRU Cache Package</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+    header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+    .container {
+      width: 80%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+    }
+    .button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1em;
+      display: inline-block;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+    h2 {
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+    code {
+      background-color: #e9ecef;
+      padding: 5px;
+      border-radius: 3px;
+    }
+    .features, .usage {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .feature, .usage-example {
+      flex: 1;
+      min-width: 250px;
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .feature h3, .usage-example h3 {
+      margin-top: 0;
+      font-size: 1.5em;
+    }
+    .feature p, .usage-example p {
+      font-size: 1em;
+      line-height: 1.6;
+    }
+    footer {
+      background-color: #007bff;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LRU Cache Package</h1>
+    <p>Your go-to solution for efficient caching in Dart</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>Features</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>Efficient Caching</h3>
+          <p>Store and retrieve data quickly with our optimized LRU caching mechanism.</p>
+        </div>
+        <div class="feature">
+          <h3>Simple API</h3>
+          <p>Easy-to-use API that integrates seamlessly into your Dart applications.</p>
+        </div>
+        <div class="feature">
+          <h3>Automatic Eviction</h3>
+          <p>Automatically evicts the least recently used items to manage memory effectively.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Usage</h2>
+      <div class="usage">
+        <div class="usage-example">
+          <h3>Getting Started</h3>
+          <p>To use the LRU Cache package, add it to your <code>pubspec.yaml</code> file:</p>
+          <pre><code>dependencies:
+  lru_cache: ^0.1.0
+</code></pre>
+        </div>
+        <div class="usage-example">
+          <h3>Example Code</h3>
+          <p>Here’s a simple example of how to use the LRU Cache:</p>
+          <pre><code>import 'package:lru_cache/lru_cache.dart';
+
+void main() {
+  final cache = LRUCache<int, String>(2);
+  cache.put(1, 'one');
+  cache.put(2, 'two');
+  print(cache.get(1)); // Outputs: one
+  cache.put(3, 'three'); // Evicts key 2
+  print(cache.get(2)); // Outputs: null
+}
+</code></pre>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <p>For more details, visit the <a href="https://github.com/arkaung/dart_lru">GitHub repository</a>.</p>
+    <p>&copy; 2024 Arkar Min Aung. All rights reserved.</p>
+  </footer>
+</body>
+</html>
