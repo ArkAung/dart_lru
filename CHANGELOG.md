@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.2.0] - 2024-09-05
+
+### Updated
+- Throws an exception if the key is not present in the cache rather than returning null
+
 ## [0.1.0] - 2024-09-05
 
 ### Added

@@ -1,5 +1,6 @@
 import 'dart:collection';
 
+/// A [LRUCache] is a cache that evicts the least recently used items when it reaches its capacity
 class LRUCache<K, V> {
   final int _capacity;
   final LinkedHashMap<K, V> _cache;
@@ -7,14 +8,17 @@ class LRUCache<K, V> {
   /// Creates a new [LRUCache] with the given [capacity]
   LRUCache(this._capacity) : _cache = LinkedHashMap<K, V>();
 
-  V? get(K key) {
-    if (!_cache.containsKey(key)) {
-      return null;
+  /// Retrieves the [value] associated with [key]
+  /// Throws an exception if the [key] is not present in the cache
+  V get(K key) {
+    final value = _cache[key];
+    if (value == null) {
+      throw ArgumentError('No value found for key: $key');
     }
-
+    
     // Move the accessed entry to the end (most recently used)
-    final value = _cache.remove(key);
-    _cache[key] = value!;
+    _cache.remove(key);
+    _cache[key] = value;
     return value;
   }
 
@@ -34,6 +38,7 @@ class LRUCache<K, V> {
     _cache.remove(key);
   }
 
+  /// Clears all entries in the cache
   void clear() {
     _cache.clear();
   }
