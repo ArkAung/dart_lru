@@ -1,10 +1,5 @@
 # Changelog
 
-## [0.2.1] - 2024-09-05
-
-### Updated
-- Run dart format to ensure perfect pub score
-
 ## [0.2.0] - 2024-09-05
 
 ### Updated
