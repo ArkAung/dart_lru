@@ -5,7 +5,7 @@ A simple Least Recently Used (LRU) cache implementation in Dart.
 ## Usage
 
 ```dart
-import 'package:lru_cache/lru_cache.dart';
+import 'package:simple_lru_cache/simple_lru_cache.dart';
 
 void main() {
     final cache - LRUCache<int, String>(2);
