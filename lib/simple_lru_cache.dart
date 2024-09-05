@@ -15,7 +15,7 @@ class LRUCache<K, V> {
     if (value == null) {
       throw ArgumentError('No value found for key: $key');
     }
-    
+
     // Move the accessed entry to the end (most recently used)
     _cache.remove(key);
     _cache[key] = value;
