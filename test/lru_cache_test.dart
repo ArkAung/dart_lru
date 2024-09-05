@@ -1,4 +1,4 @@
-import 'package:lru_cache/lru_cache.dart';
+import 'package:simple_lru_cache/simple_lru_cache.dart';
 import 'package:test/test.dart';
 
 void main() {
