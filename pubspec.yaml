@@ -1,4 +1,4 @@
-name: lru_cache
+name: simple_lru_cache
 version: 0.1.0
 description: A simple Least Recently Used (LRU) cache implementation in Dart.
 homepage: https://arkaung.github.io/dart_lru
