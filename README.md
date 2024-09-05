@@ -13,6 +13,6 @@ void main() {
     cache.put(2, 'two');
     print(cache.get(1)); // one
     print(cache.put(3, 'three'));
-    print(cache.get(2)); // null
+    print(cache.get(2)); // Exception thrown
 }
 ```
