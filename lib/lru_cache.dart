@@ -5,7 +5,7 @@ class LRUCache<K, V> {
   final LinkedHashMap<K, V> _cache;
 
   /// Creates a new [LRUCache] with the given [capacity]
-  LRUCache(this._capacity): _cache = LinkedHashMap<K, V>();
+  LRUCache(this._capacity) : _cache = LinkedHashMap<K, V>();
 
   V? get(K key) {
     if (!_cache.containsKey(key)) {
@@ -19,7 +19,7 @@ class LRUCache<K, V> {
   }
 
   /// Adds a [key] and [value] to the cache
-void put(K key, V value) {
+  void put(K key, V value) {
     if (_cache.containsKey(key)) {
       _cache.remove(key);
     } else if (_cache.length >= _capacity) {
