@@ -118,22 +118,25 @@
         <div class="usage-example">
           <h3>Getting Started</h3>
           <p>To use the LRU Cache package, add it to your <code>pubspec.yaml</code> file:</p>
-          <pre><code>dependencies:  lru_cache: ^0.1.0</code></pre>
+          <pre><code>dependencies:  simple_lru_cache: ^0.1.0</code></pre>
         </div>
         <div class="usage-example">
           <h3>Example Code</h3>
           <p>Here’s a simple example of how to use the LRU Cache:</p>
-          <pre><code>import 'package:lru_cache/lru_cache.dart';
-
-void main() {
-  final cache = LRUCache<int, String>(2);
-  cache.put(1, 'one');
-  cache.put(2, 'two');
-  print(cache.get(1)); // Outputs: one
-  cache.put(3, 'three'); // Evicts key 2
-  print(cache.get(2)); // Outputs: null
-}
-</code></pre>
+          <pre>
+            <code>
+                import 'package:simple_lru_cache/simple_lru_cache.dart';
+                
+                void main() {
+                    final cache = LRUCache<int, String>(2);
+                    cache.put(1, 'one');
+                    cache.put(2, 'two');
+                    print(cache.get(1)); // Outputs: one
+                    cache.put(3, 'three'); // Evicts key 2
+                    print(cache.get(2)); // Outputs: null
+                }
+            </code>
+        </pre>
         </div>
       </div>
     </section>
