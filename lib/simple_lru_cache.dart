@@ -43,9 +43,6 @@ class LRUCache<K, V> {
     _cache.clear();
   }
 
-  /// Returns a [List] of keys present in the cache
-  Iterable<K> keys() => _cache.keys;
-
   /// Add all [entries] to the cache
   void addAll(Map<K, V> entries) {
     if (entries.length > _capacity) {
@@ -53,6 +50,12 @@ class LRUCache<K, V> {
     }
     entries.forEach((key, value) => put(key, value));
   }
+
+  /// Returns a [List] of keys present in the cache
+  Iterable<K> get keys => _cache.keys;
+
+  /// Returns the current size of the cache
+  int get size => _cache.length;
 
   @override
   String toString() => _cache.toString();

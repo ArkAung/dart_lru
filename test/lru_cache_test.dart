@@ -57,7 +57,14 @@ void main() {
       final cache = LRUCache<int, String>(3);
       final Map<int, String> cacheItems = {1: 'one', 2: 'two', 3: 'three'};
       cache.addAll(cacheItems);
-      expect(cache.keys(), [1, 2, 3]);
+      expect(cache.keys, [1, 2, 3]);
+    });
+
+    test('Should get the size of cache after adding some elements', () {
+      final cache = LRUCache<int, String>(4);
+      final Map<int, String> cacheItems = {1: 'one', 2: 'two', 3: 'three'};
+      cache.addAll(cacheItems);
+      expect(cache.size, 3);
     });
 
     test('Should add all items', () {
