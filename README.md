@@ -1,6 +1,6 @@
 # Simple LRU Cache
 
-[![codecov](https://codecov.io/gh/arkaung/simple_lru_cache/branch/main/graph/badge.svg)](https://codecov.io/gh/arkaung/simple_lru_cache)
+[![codecov](https://codecov.io/gh/arkaung/dart_lru/branch/main/graph/badge.svg)](https://codecov.io/gh/arkaung/dart_lru)
 
 A simple and efficient Least Recently Used (LRU) cache implementation in Dart.
 
