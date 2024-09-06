@@ -1,6 +1,10 @@
 # Simple LRU Cache
 
+[![Pub Version](https://img.shields.io/pub/v/dart_lru)](https://pub.dev/packages/dart_lru)
+[![Dart SDK Version](https://badgen.net/pub/sdk-version/dart_lru)](https://pub.dev/packages/dart_lru)
 [![codecov](https://codecov.io/gh/arkaung/dart_lru/branch/main/graph/badge.svg)](https://codecov.io/gh/arkaung/dart_lru)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Pub Points](https://img.shields.io/pub/points/simple_lru_cache)](https://pub.dev/packages/simple_lru_cache/score)
 
 A simple and efficient Least Recently Used (LRU) cache implementation in Dart.
 
