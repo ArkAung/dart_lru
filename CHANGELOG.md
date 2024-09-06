@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.2] - 2024-09-06
+
+### Added
+- Method to get the current populated size of the cache
+
+### Updated
+- Use getter to get the current keys of the cache
+
 ## [0.2.1] - 2024-09-06
 
 ### Added
