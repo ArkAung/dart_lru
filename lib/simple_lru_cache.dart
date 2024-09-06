@@ -43,6 +43,17 @@ class LRUCache<K, V> {
     _cache.clear();
   }
 
+  /// Returns a [List] of keys present in the cache
+  Iterable<K> keys() => _cache.keys;
+
+  /// Add all [entries] to the cache
+  void addAll(Map<K, V> entries) {
+    if (entries.length > _capacity) {
+      throw ArgumentError('Cannot add more than capacity: $_capacity');
+    }
+    entries.forEach((key, value) => put(key, value));
+  }
+
   @override
   String toString() => _cache.toString();
 }

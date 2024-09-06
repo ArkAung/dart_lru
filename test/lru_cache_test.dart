@@ -52,5 +52,21 @@ void main() {
       expect(() => cache.get(1), throwsA(isA<ArgumentError>()));
       expect(() => cache.get(2), throwsA(isA<ArgumentError>()));
     });
+
+    test('Should get all the keys of the cache', () {
+      final cache = LRUCache<int, String>(3);
+      final Map<int, String> cacheItems = {1: 'one', 2: 'two', 3: 'three'};
+      cache.addAll(cacheItems);
+      expect(cache.keys(), [1, 2, 3]);
+    });
+
+    test('Should add all items', () {
+      final cache = LRUCache<int, String>(3);
+      final Map<int, String> cacheItems = {1: 'one', 2: 'two', 3: 'three'};
+      cache.addAll(cacheItems);
+      expect(cache.get(1), 'one');
+      expect(cache.get(2), 'two');
+      expect(cache.get(3), 'three');
+    });
   });
 }
