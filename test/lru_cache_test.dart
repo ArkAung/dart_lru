@@ -55,14 +55,14 @@ void main() {
 
     test('Should get all the keys of the cache', () {
       final cache = LRUCache<int, String>(3);
-      final Map<int, String> cacheItems = { 1: 'one', 2: 'two', 3: 'three'};
+      final Map<int, String> cacheItems = {1: 'one', 2: 'two', 3: 'three'};
       cache.addAll(cacheItems);
-      expect(cache.keys(), [1 , 2, 3]);
+      expect(cache.keys(), [1, 2, 3]);
     });
 
-     test('Should add all items', () {
+    test('Should add all items', () {
       final cache = LRUCache<int, String>(3);
-      final Map<int, String> cacheItems = { 1: 'one', 2: 'two', 3: 'three'};
+      final Map<int, String> cacheItems = {1: 'one', 2: 'two', 3: 'three'};
       cache.addAll(cacheItems);
       expect(cache.get(1), 'one');
       expect(cache.get(2), 'two');

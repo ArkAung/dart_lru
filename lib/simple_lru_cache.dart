@@ -50,7 +50,7 @@ class LRUCache<K, V> {
   void addAll(Map<K, V> entries) {
     if (entries.length > _capacity) {
       throw ArgumentError('Cannot add more than capacity: $_capacity');
-     }
+    }
     entries.forEach((key, value) => put(key, value));
   }
 
