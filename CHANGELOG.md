@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.1] - 2024-09-06
+
+### Added
+- Method to retrieve all the keys
+- Method to add multiple entires at once to the cache
+
 ## [0.2.0] - 2024-09-05
 
 ### Updated
